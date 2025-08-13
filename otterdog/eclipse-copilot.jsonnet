@@ -16,4 +16,13 @@ orgs.newOrg('tools.copilot', 'eclipse-copilot') {
       default_workflow_permissions: "write",
     },
   },
+  _repositories+:: [
+    orgs.newRepo('eclipse-copilot') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "main",
+      delete_branch_on_merge: true,
+      web_commit_signoff_required: false,
+    },
+  ]
 }
