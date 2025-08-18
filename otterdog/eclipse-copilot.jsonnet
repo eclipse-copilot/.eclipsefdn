@@ -24,6 +24,15 @@ orgs.newOrg('tools.copilot', 'eclipse-copilot') {
       delete_branch_on_merge: true,
       has_discussions: true,
       web_commit_signoff_required: false,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          requires_pull_request: true,
+          required_approving_review_count: 1,
+          requires_strict_status_checks: true,
+          allows_force_pushes: false,
+          allows_deletions: false,
+        },
+      ],
     },
   ]
 }
