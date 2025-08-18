@@ -22,6 +22,7 @@ orgs.newOrg('tools.copilot', 'eclipse-copilot') {
       allow_update_branch: false,
       default_branch: "main",
       delete_branch_on_merge: true,
+      has_discussions: true,
       web_commit_signoff_required: false,
     },
   ]
