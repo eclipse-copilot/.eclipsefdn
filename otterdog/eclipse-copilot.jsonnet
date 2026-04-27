@@ -18,6 +18,7 @@ orgs.newOrg('tools.copilot', 'eclipse-copilot') {
   },
   _repositories+:: [
     orgs.newRepo('eclipse-copilot') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "main",
